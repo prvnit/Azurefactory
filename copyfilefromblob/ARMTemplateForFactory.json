@@ -24,7 +24,7 @@
 				"description": "test",
 				"activities": [
 					{
-						"name": "Copy data1 test test2",
+						"name": "Copy data1 test test2345",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
