@@ -33,7 +33,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "blobdataset",
+						"referenceName": "blobdataset1",
 						"type": "DatasetReference"
 					}
 				],
