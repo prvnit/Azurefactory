@@ -1,5 +1,5 @@
 {
-	"name": "blobdataset1",
+	"name": "blobdataset2",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "linkserviceablob",
