@@ -39,7 +39,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "blobdatasettarget",
+						"referenceName": "blobdatasettarget1",
 						"type": "DatasetReference"
 					}
 				]
