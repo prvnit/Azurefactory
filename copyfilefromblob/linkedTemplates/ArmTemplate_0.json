@@ -30,29 +30,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/blobdatasettarget')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "linkserviceablob",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "Binary",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation",
-						"container": "target"
-					}
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/linkserviceablob')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/blobdataset')]",
+			"name": "[concat(parameters('factoryName'), '/blobdataset2')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -96,7 +74,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/pipeline1')]",
+			"name": "[concat(parameters('factoryName'), '/pipeline')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -132,14 +110,14 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "blobdataset",
+								"referenceName": "blobdataset2",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "blobdatasettarget",
+								"referenceName": "blobdatasettarget1",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -149,8 +127,8 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/blobdataset')]",
-				"[concat(variables('factoryId'), '/datasets/blobdatasettarget')]"
+				"[concat(variables('factoryId'), '/datasets/blobdataset2')]",
+				"[concat(variables('factoryId'), '/datasets/blobdatasettarget1')]"
 			]
 		}
 	]
